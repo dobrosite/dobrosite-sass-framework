@@ -1,0 +1,22 @@
+{
+  "name": "dobrosite-sass-framework",
+  "description": "SASS framework for site development",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": [
+    "bem",
+    "sass",
+    "scss"
+  ],
+  "author": "Михаил Красильников",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dobrosite/dobrosite-sass-framework.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "compass-mixins": "^0.12.10"
+  }
+}
