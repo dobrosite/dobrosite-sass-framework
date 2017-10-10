@@ -30,7 +30,7 @@ $some-setting: custom-value;
 
 ### Где используется
 
-- [Адаптивная вёрстка](adaptive.ru.md).
+- [Адаптивная вёрстка](adaptive.ru.md)
 
 
 ## Размеры устройств
@@ -50,7 +50,7 @@ $some-setting: custom-value;
 
 ### Где используется
 
-- [Адаптивная вёрстка](adaptive.ru.md).
+- [Адаптивная вёрстка](adaptive.ru.md)
 
 ## Слои по оси Z
 
