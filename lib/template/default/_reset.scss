@@ -1,0 +1,238 @@
+/**
+ * Сброс стилей для тегов HTML.
+ */
+
+* {
+    @include box-sizing(border-box);
+}
+
+a {
+//    @include style--link;
+}
+
+body {
+    font-size: 1rem;
+}
+
+button {
+    @include appearance(none); // Чтобы WebKit показывал кнопки так, как хотим мы.
+
+    &::-moz-focus-inner {
+        border: none;
+    }
+}
+
+dd {
+    @include reset-box-model;
+}
+
+dl {
+}
+
+dt {
+    &::after {
+        content: ': ';
+    }
+}
+
+/*
+ * Настройки заголовков.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    @include reset-box-model;
+    //color: $headingColor;
+    //font-family: $headingFontFamily;
+    font-weight: 400;
+    margin: 1ex 0;
+    text-align: center; // На смартфонах заголовки смотрятся выровненными по середине.
+
+    &:first-child {
+        // Если это первый узел в этом контейнере, отступ сверху не нужен.
+        margin-top: 0;
+    }
+
+    @include for-tablet-landscape-and-wider {
+        // Если места много, можно вернуть привычное выравнивание по ширине.
+        text-align: left;
+    }
+}
+
+@mixin heading-font-size($level)
+{
+    @function multiplier($level, $ratio)
+    {
+        @if $level == 1 {
+            @return $ratio * $ratio * $ratio;
+        }
+        @if $level == 2 {
+            @return $ratio * $ratio;
+        }
+        @if $level == 3 {
+            @return $ratio;
+        }
+        @if $level == 4 {
+            @return 1;
+        }
+        @if $level == 5 {
+            @return 1 / $ratio;
+        }
+        @return 1 / $ratio / $ratio;
+    }
+
+    //font-size: $headingBaseSize * multiplier($level, $headingRatioPhone);
+    //
+    //@include for-tablet-portrait-and-wider {
+    //    font-size: $headingBaseSize * multiplier($level, $headingRatioTabletPortrait);
+    //}
+    //
+    //@include for-tablet-landscape-and-wider {
+    //    font-size: $headingBaseSize * multiplier($level, $headingRatioTabletLandscape);
+    //}
+    //
+    //@include for-desktop-and-wider {
+    //    font-size: $headingBaseSize * multiplier($level, $headingRatioDesktop);
+    //}
+    //
+    //@include for-wide-screens {
+    //    font-size: $headingBaseSize * multiplier($level, $headingRatioWideScreen);
+    //}
+}
+
+h1 {
+    @include heading-font-size(1);
+    text-transform: uppercase;
+}
+
+h2 {
+    @include heading-font-size(2);
+    text-transform: uppercase;
+}
+
+h3 {
+    @include heading-font-size(3);
+    text-transform: uppercase;
+}
+
+h4 {
+    @include heading-font-size(4);
+}
+
+h5 {
+    @include heading-font-size(5);
+}
+
+h6 {
+    @include heading-font-size(6);
+}
+
+html {
+    //font-family: $textFontFamily;
+    font-size: $rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+
+    &[data-image-url] {
+        cursor: pointer;
+    }
+}
+
+input {
+    &[type=email],
+    &[type=number],
+    &[type=search],
+    &[type=tel],
+    &[type=text] {
+        @include appearance(none); // Чтобы WebKit показывал поля так, как хотим мы.
+        //@include style--input;
+    }
+
+    &[type=radio] {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+li {
+    @include reset-box-model;
+    margin: .2rem 0 .2rem 2em;
+}
+
+ol {
+    @include reset-box-model;
+    @include reset-list-style;
+    //@include style--list;
+    counter-reset: section;
+
+    & > li {
+        &::before {
+            content: counters(section, '.');
+            counter-increment: section;
+            margin-right: .8em;
+        }
+    }
+}
+
+ul {
+    @include reset-box-model;
+    @include reset-list-style;
+    //@include style--list;
+
+    & > li {
+        $markerSize: .6em;
+        &::before {
+            @include border-radius(50%);
+            //background: $color-secondary-1-0;
+            //border: solid 1px $color-secondary-1-0;
+            content: '';
+            display: inline-block;
+            height: $markerSize;
+            margin-right: .8em;
+            width: $markerSize;
+        }
+
+        li {
+            &::before {
+                //background: $color-white;
+            }
+        }
+    }
+}
+
+p {
+    //@include style--para;
+}
+
+table {
+    font-size: .96rem;
+}
+
+td {
+    padding: 1em;
+}
+
+textarea {
+    @include appearance(none); // Чтобы WebKit показывал поля так, как хотим мы.
+    //@include style--input;
+    height: auto;
+    line-height: 1.5;
+
+    @include for-desktop-and-wider {
+        height: auto;
+        line-height: 1.5;
+    }
+}
+
+th {
+    padding: 1em;
+}
+
+tr {
+    padding: 1em;
+}

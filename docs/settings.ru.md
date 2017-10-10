@@ -9,13 +9,13 @@
 ```scss
 $some-setting: custom-value;
 
-@import "node_modules/dobrosite-sass-framework/src/all";
+@import "node_modules/dobrosite-sass-framework/lib/all";
 ```
 
 Неправильно:
 
 ```scss
-@import "node_modules/dobrosite-sass-framework/src/all";
+@import "node_modules/dobrosite-sass-framework/lib/all";
 
 $some-setting: custom-value;
 ```

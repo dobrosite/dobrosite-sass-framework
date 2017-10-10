@@ -1,0 +1,6 @@
+/**
+ * Настройки шаблона.
+ */
+
+// Наибольшая ширина тела страницы.
+$tpl-site-body-max-width: $device-desktop-width - 2 * $rem;

@@ -7,10 +7,20 @@
 
     npm install --save dobrosite-sass-framework
 
+Для большей части функционала также потребуется [compass](https://www.npmjs.com/package/compass) или
+[compass-mixins](https://github.com/Igosuki/compass-mixins).
+
 ## Подключение
 
+Совместно с Compass:
+
+TODO
+
+Совместно с compass-mixins:
+
 ```scss
-@import "node_modules/dobrosite-sass-framework/src/all";
+@import "path/to//node_modules/compass-mixins/lib/compass";
+@import "path/to/node_modules/dobrosite-sass-framework/lib/all";
 ```
 
 ## Документация

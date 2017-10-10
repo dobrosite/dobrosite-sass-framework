@@ -1,7 +1,7 @@
 # Адаптивная вёрстка
 
-Для доступа к этим возможностям подключите файл [_adaptive.scss](../src/_adaptive.scss) или
-[_all.scss](../src/_all.scss).
+Для доступа к этим возможностям подключите файл [_adaptive.scss](../lib/_adaptive.scss) или
+[_all.scss](../lib/_all.scss).
 
 ## Медиа-запросы
 

@@ -9,6 +9,7 @@
     "scss"
   ],
   "author": "Михаил Красильников",
+  "main": "lib/_all.scss",
   "repository": {
     "type": "git",
     "url": "git@github.com:dobrosite/dobrosite-sass-framework.git"
@@ -16,7 +17,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
+  "optionalDependencies": {
+    "compass": "^0.1.1",
     "compass-mixins": "^0.12.10"
+  },
+  "devDependencies": {
+    "compass": "^0.1.1",
+    "compass-mixins": "^0.12.10",
+    "node-sass": "^3.3"
   }
 }
