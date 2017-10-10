@@ -1,0 +1,90 @@
+/**
+ * Типографика.
+ */
+
+@import "adaptive";
+
+/**
+ * Возвращает мультипликатор размера заголовка.
+ *
+ * @param $level Уровень заголовка (1, 2, 3…).
+ * @param $ratio Используемое отношение (см. $heading-ratio-…).
+ */
+@function heading-size-multiplier($level, $ratio)
+{
+    @if $level == 1 {
+        @return $ratio * $ratio * $ratio;
+    }
+    @if $level == 2 {
+        @return $ratio * $ratio;
+    }
+    @if $level == 3 {
+        @return $ratio;
+    }
+    @if $level == 4 {
+        @return 1;
+    }
+    @if $level == 5 {
+        @return 1 / $ratio;
+    }
+    @return 1 / $ratio / $ratio;
+}
+
+/**
+ * Задаёт размер шрифта заголовка
+ *
+ * @param $level Уровень заголовка (1, 2, 3…).
+ */
+@mixin heading-font-size($level)
+{
+    font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-default);
+
+    @include for-phone-and-wider {
+        font-size: $heading-base-size
+            * heading-size-multiplier($level, $heading-ratio-phone);
+    }
+
+    @include for-tablet-portrait-and-wider {
+        font-size: $heading-base-size
+            * heading-size-multiplier($level, $heading-ratio-tablet-portrait);
+    }
+
+    @include for-tablet-landscape-and-wider {
+        font-size: $heading-base-size
+            * heading-size-multiplier($level, $heading-ratio-tablet-landscape);
+    }
+
+    @include for-desktop-and-wider {
+        font-size: $heading-base-size
+            * heading-size-multiplier($level, $heading-ratio-desktop);
+    }
+
+    @include for-wide-screens {
+        font-size: $heading-base-size
+            * heading-size-multiplier($level, $heading-ratio-widescreen);
+    }
+}
+
+h1 {
+    @include heading-font-size(1);
+}
+
+h2 {
+    @include heading-font-size(2);
+}
+
+h3 {
+    @include heading-font-size(3);
+}
+
+h4 {
+    @include heading-font-size(4);
+}
+
+h5 {
+    @include heading-font-size(5);
+}
+
+h6 {
+    @include heading-font-size(6);
+}

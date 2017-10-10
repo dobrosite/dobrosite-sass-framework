@@ -2,5 +2,7 @@
  * Настройки шаблона.
  */
 
-// Наибольшая ширина тела страницы.
-$tpl-site-body-max-width: $device-desktop-width - 2 * $rem;
+// Наибольшая ширина страницы.
+$tpl-page-body-max-width: $device-desktop-width - 2 * $rem;
+// Наименьшая ширина страницы.
+$tpl-page-body-min-width: $device-phone-width;
