@@ -1,0 +1,66 @@
+/**
+ * Глобальные переменные.
+ */
+
+@import "constants";
+
+/*
+ * Размеры для адаптивного дизайна.
+ *
+ * @see http://css-live.ru/articles-css/pravilnye-kontrolnye-tochki-v-css.html
+ */
+// Наименьшая ширина телефона.
+$device-phone-width: 320px !default;
+// Наименьшая ширина планшета в вертикальном положении.
+$device-tablet-portrait-width: 768px !default;
+// Наименьшая ширина планшета в горизонтальном положении.
+$device-tablet-landscape-width: 900px !default;
+// Наименьшая ширина настольного компьютера.
+$device-desktop-width: 1200px !default;
+// Наименьшая ширина широкоформатного монитора.
+$device-widescreen-width: 1800px !default;
+
+/*
+ * Основная единица размера.
+ * TODO Будет задано как значение font-size тега html. ???
+ */
+$rem: 16px !default;
+
+/**
+ * Слои по оси Z.
+ */
+// Наименьшее значение z-index фиксированных блоков.
+$z-index-fixed: 101;
+// Наименьшее значение z-index всплывающих блоков.
+$z-index-popup: $z-index-fixed + 100;
+
+/*
+ * Оттенки серого.
+ */
+//$color-black: #222;
+//$color-gray-darkest: #444;
+//$color-gray-dark: #888;
+//$color-gray: #aaa;
+//$color-gray-light: #ccc;
+//$color-gray-lightest: #eee;
+//$color-white: #fff;
+
+/*
+ * Настройки
+ */
+
+/* Основной текст. */
+//$text-color: $color-black;
+//$text-font-family: sans-serif;
+
+/* Заголовки. */
+//$heading-color: $color-gray-darkest;
+//$heading-font-family: serif;
+// Основной размер шрифтов заголовков.
+//$heading-base-size: 1.4 * $rem;
+// Коэффициенты изменения размера заголовков. См. http://type-scale.com/
+//$heading-ratio-phone: 1.067; // Малая секунда.
+//$heading-ratio-tablet-portrait: 1.125; // Большая секунда.
+//$heading-ratio-tablet-landscape: 1.2; // Малая терция.
+//$heading-ratio-desktop: 1.2; // Малая терция.
+//$heading-ratio-widescreen: 1.25; // Большая терция.

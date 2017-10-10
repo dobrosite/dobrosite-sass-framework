@@ -1,0 +1,50 @@
+/**
+ * Инструменты адаптивного дизайна.
+ */
+
+@import "settings";
+
+/**
+ * Стили для смартфонов.
+ */
+@mixin for-phone-and-wider {
+    @media (min-width: $device-phone-width) {
+        @content;
+    }
+}
+
+/**
+ * Стили для планшетов в вертикальном положении.
+ */
+@mixin for-tablet-portrait-and-wider {
+    @media (min-width: $device-tablet-portrait-width) {
+        @content;
+    }
+}
+
+/**
+ * Стили для планшетов в горизонтальном положении.
+ */
+@mixin for-tablet-landscape-and-wider {
+    @media (min-width: $device-tablet-landscape-width) {
+        @content;
+    }
+}
+
+/**
+ * Стили для настольных компьютеров.
+ */
+@mixin for-desktop-and-wider {
+    @media (min-width: $device-desktop-width) {
+        @content;
+    }
+}
+
+/**
+ * Стили для широкоформатных устройств.
+ */
+@mixin for-wide-screens {
+    @media (min-width: $device-widescreen-width) {
+        @content;
+    }
+}

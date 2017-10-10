@@ -1,0 +1,26 @@
+/**
+ * Глобальные константы.
+ */
+
+/*
+ * Коэффициенты изменения размера шрифта.
+ *
+ * @see http://type-scale.com/
+ */
+
+// Малая секунда.
+$FONT_RATIO_MINOR_SECOND: 1.067;
+// Большая секунда.
+$FONT_RATIO_MAJOR_SECOND: 1.125;
+// Малая терция.
+$FONT_RATIO_MINOR_THIRD: 1.2;
+// Большая терция.
+$FONT_RATIO_MAJOR_THIRD: 1.25;
+// Чистая кварта.
+$FONT_RATIO_PERFECT_FOURTH: 1.333;
+// Увеличенная кварта.
+$FONT_RATIO_AUGMENTED_FOURTH: 1.414;
+// Полная квинта.
+$FONT_RATIO_PERFECT_FIFTH: 1.5;
+// Золотое сечение.
+$FONT_RATIO_GOLDEN_RATIO: 1.618;
