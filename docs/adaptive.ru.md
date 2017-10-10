@@ -11,28 +11,28 @@
 
 ### for-phone-and-wider
 
-Примесь для указания стилей для экранов [$device-phone-width](settings.ru.md#$device-phone-width) и
+Примесь для указания стилей для экранов [$device-phone-width](settings.ru.md#device-phone-width) и
 шире.
 
 ### for-tablet-portrait-and-wider
 
 Примесь для указания стилей для экранов
-[$device-tablet-portrait-width](settings.ru.md#$device-tablet-portrait-width) и шире.
+[$device-tablet-portrait-width](settings.ru.md#device-tablet-portrait-width) и шире.
 
 ### for-tablet-landscape-and-wider
 
 Примесь для указания стилей для экранов
-[$device-tablet-landscape-width](settings.ru.md#$device-tablet-landscape-width) и шире.
+[$device-tablet-landscape-width](settings.ru.md#device-tablet-landscape-width) и шире.
 
 ### for-desktop-and-wider
 
 Примесь для указания стилей для экранов
-[$device-desktop-width](settings.ru.md#$device-desktop-width) и шире.
+[$device-desktop-width](settings.ru.md#device-desktop-width) и шире.
 
 ### for-wide-screens
 
 Примесь для указания стилей для экранов
-[$device-widescreen-width](settings.ru.md#$device-widescreen-width) и шире.
+[$device-widescreen-width](settings.ru.md#device-widescreen-width) и шире.
 
 ### Пример
 
