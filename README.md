@@ -10,7 +10,7 @@
 ## Подключение
 
 ```scss
-@import "node_modules/dobrosite-sass-framework/all";
+@import "node_modules/dobrosite-sass-framework/src/all";
 ```
 
 ## Документация

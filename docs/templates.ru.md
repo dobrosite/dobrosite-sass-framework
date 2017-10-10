@@ -4,12 +4,12 @@
 расположены в папке `template` и могут быть подключены следующим образом:
 
 ```scss
-@import "node_modules/dobrosite-sass-framework/template/имя_шаблона/all";
+@import "node_modules/dobrosite-sass-framework/src/template/имя_шаблона/all";
 ```
 Каждый шаблон состоит из отдельных файлов, которые можно подключать по отдельности:
 
 ```scss
-@import "node_modules/dobrosite-sass-framework/template/имя_шаблона/reset";
+@import "node_modules/dobrosite-sass-framework/src/template/имя_шаблона/reset";
 ```
 
 ## Структура шаблона
