@@ -6,6 +6,10 @@
     @include box-sizing(border-box);
 }
 
+a {
+    @include style-link;
+}
+
 body {
     font-size: 1rem;
 }

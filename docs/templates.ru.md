@@ -16,4 +16,5 @@
 
 - `_settings.scss` — настройки шаблона.
 - `_reset.scss` — сброс стилей для тегов HTML.
+- `_styles.scss` — библиотека стилей.
 - `_typography.scss` — оформление текста.

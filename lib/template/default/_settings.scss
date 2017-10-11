@@ -6,3 +6,11 @@
 $tpl-page-body-max-width: $device-desktop-width - 2 * $rem;
 // Наименьшая ширина страницы.
 $tpl-page-body-min-width: $device-phone-width;
+
+/*
+ * Ссылки.
+ */
+$tpl-link-color: blue;
+$tpl-link-visited-color: darkblue;
+$tpl-link-hover-color: dodgerblue;
+$tpl-link-active-color: $tpl-link-hover-color;

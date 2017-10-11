@@ -1,0 +1,28 @@
+/**
+ * Библиотека стилей.
+ */
+
+/**
+ * Стиль ссылок.
+ */
+@mixin style-link {
+    color: $tpl-link-color;
+    cursor: pointer;
+    outline: none;
+    text-decoration: underline;
+
+    &:visited {
+        color: $tpl-link-visited-color;
+        text-decoration: underline;
+    }
+
+    &:hover {
+        color: $tpl-link-hover-color;
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $tpl-link-hover-color;
+        text-decoration: underline;
+    }
+}
