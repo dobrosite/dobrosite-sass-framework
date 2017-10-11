@@ -3,14 +3,14 @@
  */
 
 // Наибольшая ширина страницы.
-$tpl-page-body-max-width: $device-desktop-width - 2 * $rem;
+$tpl-page-body-max-width: $device-desktop-width - 2 * $rem !default;
 // Наименьшая ширина страницы.
-$tpl-page-body-min-width: $device-phone-width;
+$tpl-page-body-min-width: $device-phone-width !default;;
 
 /*
  * Ссылки.
  */
-$tpl-link-color: blue;
-$tpl-link-visited-color: darkblue;
-$tpl-link-hover-color: dodgerblue;
-$tpl-link-active-color: $tpl-link-hover-color;
+$tpl-link-color: blue !default;;
+$tpl-link-visited-color: darkblue !default;;
+$tpl-link-hover-color: dodgerblue !default;;
+$tpl-link-active-color: $tpl-link-hover-color !default;;
