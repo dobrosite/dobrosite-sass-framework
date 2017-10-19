@@ -14,8 +14,11 @@
 ```scss
 @import "settings";
 
+// Подключаем Compass.
 @import "path/to/node_modules/compass-mixins/lib/compass";
+// Подключаем фреймворк.
 @import "path/to/node_modules/dobrosite-sass-framework/lib/all";
+// Подключаем шаблон.
 @import "path/to/node_modules/dobrosite-sass-framework/lib/template/default/all";
 
 @import "blocks/foo";

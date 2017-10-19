@@ -1,7 +1,7 @@
 /**
  * Страница сайта.
  */
-.page {
+@include block(page) {
     @include reset-body;
     @include reset-box-model;
     display: block;
@@ -11,7 +11,7 @@
     /*
      * Тело страницы сайта.
      */
-    &__body {
+    @include element(body) {
         @include reset-box-model;
         @include display-flex(flex);
         @include flex-flow(column);
@@ -25,7 +25,7 @@
     /*
      * Подвал сайта.
      */
-    &__footer {
+    @include element(footer) {
         @include reset-box-model;
         @include flex(1 1 initial);
         @include order(3);
@@ -35,7 +35,7 @@
     /*
      * Шапка сайта.
      */
-    &__header {
+    @include element(header) {
         @include reset-box-model;
         @include flex(1 1 initial);
         @include order(1);
@@ -43,10 +43,14 @@
     }
 
     /* Область главного содержимого. */
-    &__main {
+    @include element(main) {
         @include reset-box-model;
         @include flex(1 1 auto);
         @include order(2);
         display: block;
+    }
+
+    @include modifier(scrolled) {
+        position: fixed;
     }
 }

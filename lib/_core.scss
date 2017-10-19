@@ -1,0 +1,38 @@
+/**
+ * Основная часть.
+ */
+@import "settings";
+
+/**
+ * Блок БЭМ.
+ */
+@mixin block($name) {
+    .#{$name} {
+        font-size: 1rem;
+        @content;
+    }
+}
+
+/**
+ * Элемент блока БЭМ.
+ */
+@mixin element($name) {
+    &#{$bem-element-separator}#{$name} {
+        @content;
+    }
+}
+
+/**
+ * Модификатор БЭМ.
+ */
+@mixin modifier($property, $value: true) {
+    @if $value == true or $value == yes {
+        &#{$bem-modifier-separator}#{$property} {
+            @content;
+        }
+    } @else {
+        &#{$bem-modifier-separator}#{$property}#{$bem-modifier-value-separator}#{$value} {
+            @content;
+        }
+    }
+}

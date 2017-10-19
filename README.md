@@ -18,6 +18,7 @@
 
 - [Введение](docs/intro.ru.md)
 - [Настройки](docs/settings.ru.md)
+- [БЭМ](docs/bem.ru.md)
 - [Адаптивная вёрстка](docs/adaptive.ru.md)
 - [Типографика](docs/typography.ru.md)
 - [Шаблоны](docs/templates.ru.md)

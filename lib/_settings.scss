@@ -12,7 +12,7 @@
 // Наименьшая ширина телефона.
 $device-phone-width: 320px !default;
 // Наименьшая ширина планшета в вертикальном положении.
-$device-tablet-portrait-width: 768px !default;
+$device-tablet-portrait-width: 600px !default;
 // Наименьшая ширина планшета в горизонтальном положении.
 $device-tablet-landscape-width: 900px !default;
 // Наименьшая ширина настольного компьютера.
@@ -25,7 +25,7 @@ $device-widescreen-width: 1800px !default;
  */
 $rem: 16px !default;
 
-/**
+/*
  * Слои по оси Z.
  */
 // Наименьшее значение z-index фиксированных блоков.
@@ -43,3 +43,13 @@ $heading-ratio-tablet-portrait: $FONT_RATIO_MAJOR_SECOND !default;
 $heading-ratio-tablet-landscape: $FONT_RATIO_MINOR_THIRD !default;
 $heading-ratio-desktop: $FONT_RATIO_MINOR_THIRD !default;
 $heading-ratio-widescreen: $FONT_RATIO_MAJOR_THIRD !default;
+
+/*
+ * Настройки БЭМ.
+ */
+// Разделитель имени элемента.
+$bem-element-separator: "__" !default;
+// Разделитель имени модификатора
+$bem-modifier-separator: "_" !default;
+// Разделитель значения модификатора
+$bem-modifier-value-separator: $bem-modifier-separator !default;
