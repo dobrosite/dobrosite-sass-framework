@@ -90,11 +90,17 @@ ol {
     @include reset-list-style;
 }
 
-ul {
-    @include reset-box-model;
-    @include reset-list-style;
+summary {
+    cursor: pointer;
+    margin: 0 0 1ex 0;
+    outline: none;
 }
 
 textarea {
     @include appearance(none);
+}
+
+ul {
+    @include reset-box-model;
+    @include reset-list-style;
 }
