@@ -5,12 +5,12 @@
 // Наибольшая ширина страницы.
 $tpl-page-body-max-width: $device-desktop-width - 2 * $rem !default;
 // Наименьшая ширина страницы.
-$tpl-page-body-min-width: $device-phone-width !default;;
+$tpl-page-body-min-width: $device-phone-width !default;
 
 /*
  * Ссылки.
  */
-$tpl-link-color: blue !default;;
-$tpl-link-visited-color: darkblue !default;;
-$tpl-link-hover-color: dodgerblue !default;;
-$tpl-link-active-color: $tpl-link-hover-color !default;;
+$tpl-link-color: blue !default;
+$tpl-link-visited-color: darkblue !default;
+$tpl-link-hover-color: dodgerblue !default;
+$tpl-link-active-color: $tpl-link-hover-color !default;
