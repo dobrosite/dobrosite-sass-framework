@@ -10,10 +10,6 @@ a {
     @include style-link;
 }
 
-body {
-    font-size: 1rem;
-}
-
 button {
     @include appearance(none);
 

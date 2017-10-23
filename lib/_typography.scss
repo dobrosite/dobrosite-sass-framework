@@ -37,32 +37,45 @@
  */
 @mixin heading-font-size($level)
 {
-    font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-default);
+    $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-default);
+    font-size: $font-size;
+    line-height: ceil($font-size / $grid-step-v) * $grid-step-v;
 
     @include for-phone-and-wider {
-        font-size: $heading-base-size
-            * heading-size-multiplier($level, $heading-ratio-phone);
+        $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-phone);
+        font-size: $font-size;
+        line-height: ceil($font-size / $grid-step-v) * $grid-step-v;
     }
 
     @include for-tablet-portrait-and-wider {
-        font-size: $heading-base-size
-            * heading-size-multiplier($level, $heading-ratio-tablet-portrait);
+        $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-tablet-portrait);
+        font-size: $font-size;
+        line-height: ceil($font-size / $grid-step-v) * $grid-step-v;
     }
 
     @include for-tablet-landscape-and-wider {
-        font-size: $heading-base-size
-            * heading-size-multiplier($level, $heading-ratio-tablet-landscape);
+        $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-tablet-landscape);
+        font-size: $font-size;
+        line-height: ceil($font-size / $grid-step-v) * $grid-step-v;
     }
 
     @include for-desktop-and-wider {
-        font-size: $heading-base-size
-            * heading-size-multiplier($level, $heading-ratio-desktop);
+        $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-desktop);
+        font-size: $font-size;
+        line-height: ceil($font-size / $grid-step-v) * $grid-step-v;
     }
 
     @include for-wide-screens {
-        font-size: $heading-base-size
-            * heading-size-multiplier($level, $heading-ratio-widescreen);
+        $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-widescreen);
+        font-size: $font-size;
+        line-height: ceil($font-size / $grid-step-v) * $grid-step-v;
     }
+}
+
+
+body {
+    font-size: $text-font-size;
+    line-height: $text-line-height;
 }
 
 h1 {
@@ -87,4 +100,10 @@ h5 {
 
 h6 {
     @include heading-font-size(6);
+}
+
+p {
+    font-size: $text-font-size;
+    line-height: $text-line-height;
+    margin: $text-line-height * $text-font-size 0;
 }

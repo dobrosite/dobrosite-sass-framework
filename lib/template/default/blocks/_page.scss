@@ -2,10 +2,8 @@
  * Страница сайта.
  */
 @include block(page) {
-    @include reset-body;
     @include reset-box-model;
     display: block;
-    font-size: 1rem;
     min-height: 100vh;
 
     /*

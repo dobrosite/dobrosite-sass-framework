@@ -1,0 +1,9 @@
+@include block(page) {
+    @include element(footer) {
+        background: #efe;
+    }
+    @include element(header) {
+        @include padding(1/2);
+        background: #eef;
+    }
+}

@@ -19,8 +19,9 @@
 
 Задаёт свойства:
 
-```css
-font-size: 1rem;
+```scss
+font-size: $text-font-size;
+line-height: $text-line-height;
 ```
 
 См. [Пример блока](#Пример-блока)
