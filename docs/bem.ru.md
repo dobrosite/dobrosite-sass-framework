@@ -1,5 +1,7 @@
 # БЭМ
 
+*Эти возможности определены в файле [_bem.scss](../lib/_bem.scss).*
+
 Настройки:
 
 - [Настройки БЭМ](settings.ru.md#Настройки-БЭМ)
@@ -19,8 +21,9 @@
 
 Задаёт свойства:
 
-```css
-font-size: 1rem;
+```scss
+font-size: $text-font-size;
+line-height: $text-line-height;
 ```
 
 См. [Пример блока](#Пример-блока)

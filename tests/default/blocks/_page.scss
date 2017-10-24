@@ -1,0 +1,12 @@
+@include block(page) {
+    @include element(footer) {
+        background: #dfd;
+    }
+    @include element(header) {
+        @include padding(1/2);
+        background: #ddf;
+    }
+    @include element(sidebar) {
+        background: #ffd;
+    }
+}

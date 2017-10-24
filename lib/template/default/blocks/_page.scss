@@ -12,7 +12,7 @@
     @include element(body) {
         @include reset-box-model;
         @include display-flex(flex);
-        @include flex-flow(column);
+        @include flex-flow(row wrap);
         margin: 0 auto;
         max-width: $tpl-page-body-max-width;
         min-height: 100vh;
@@ -25,9 +25,12 @@
      */
     @include element(footer) {
         @include reset-box-model;
-        @include flex(1 1 initial);
-        @include order(3);
+        @include flex(1 100%);
         display: block;
+
+        @include for-tablet-landscape-and-wider {
+            @include order(4);
+        }
     }
 
     /*
@@ -35,20 +38,50 @@
      */
     @include element(header) {
         @include reset-box-model;
-        @include flex(1 1 initial);
-        @include order(1);
+        @include flex(1 100%);
         display: block;
     }
 
     /* Область главного содержимого. */
     @include element(main) {
         @include reset-box-model;
-        @include flex(1 1 auto);
-        @include order(2);
+        @include flex(1 100%);
         display: block;
+
+        @include for-tablet-landscape-and-wider {
+            @include flex(3 0px);
+            @include order(2);
+        }
     }
 
-    @include modifier(scrolled) {
-        position: fixed;
+    /*
+     * Боковая панель.
+     */
+    @include element(sidebar) {
+        @include reset-box-model;
+        @include flex(1 100%);
+        display: block;
+
+        @include for-tablet-portrait-and-wider {
+            @include flex(1 auto);
+        }
+
+        /*
+         * Левая панель.
+         */
+        @include modifier(on, left) {
+            @include for-tablet-landscape-and-wider {
+                @include order(1);
+            }
+        }
+
+        /*
+         * Правая панель.
+         */
+        @include modifier(on, right) {
+            @include for-tablet-landscape-and-wider {
+                @include order(3);
+            }
+        }
     }
 }

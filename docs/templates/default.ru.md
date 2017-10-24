@@ -11,16 +11,16 @@
 Возможные значения:
 
 - [единицы расстояния](https://www.w3.org/TR/css3-values/#lengths);
-- false` — наибольшая ширина не ограничена.
+- `false` — наибольшая ширина не ограничена.
 
-По умолчанию [$device-desktop-width](../settings.ru.md#Размеры-устройств) − 2 ×
+По умолчанию [$device-desktop-width](../settings.ru.md#device-desktop-width) − 2 ×
 [$rem](../settings.ru.md#Основной-размер). 
 
 ### $tpl-page-body-min-width
 
 Наименьшая ширина до которой может уменьшаться элемент [page__body](#page__body).
 
-По умолчанию [$device-phone-width](../settings.ru.md#Размеры-устройств).
+По умолчанию [$device-phone-width](../settings.ru.md#device-phone-width).
 
 Возможные значения:
 

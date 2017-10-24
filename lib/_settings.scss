@@ -5,6 +5,21 @@
 @import "constants";
 
 /*
+ * Основная единица размера.
+ */
+$rem: 16px !default;
+
+/*
+ * Настройки БЭМ.
+ */
+// Разделитель имени элемента.
+$bem-element-separator: "__" !default;
+// Разделитель имени модификатора
+$bem-modifier-separator: "_" !default;
+// Разделитель значения модификатора
+$bem-modifier-value-separator: $bem-modifier-separator !default;
+
+/*
  * Размеры для адаптивного дизайна.
  *
  * @see http://css-live.ru/articles-css/pravilnye-kontrolnye-tochki-v-css.html
@@ -21,22 +36,19 @@ $device-desktop-width: 1200px !default;
 $device-widescreen-width: 1800px !default;
 
 /*
- * Основная единица размера.
+ * Настройки сетки.
  */
-$rem: 16px !default;
-
-/*
- * Слои по оси Z.
- */
-// Наименьшее значение z-index фиксированных блоков.
-$z-index-fixed: 101 !default;
-// Наименьшее значение z-index всплывающих блоков.
-$z-index-popup: $z-index-fixed + 100 !default;
+$grid-step-h: $rem / 2 !default;
+$grid-step-v: $rem / 2 !default;
 
 // Основной размер шрифтов заголовков.
-$heading-base-size: 1.4 * $rem !default;
+$heading-base-size: 1.5 * $rem !default;
+// Основная высота строки заголовков.
+$heading-base-height: 1 !default;
 
-// Коэффициенты изменения размера заголовков.
+/*
+ * Коэффициенты изменения размера заголовков.
+ */
 $heading-ratio-default: $FONT_RATIO_MINOR_SECOND !default;
 $heading-ratio-phone: $FONT_RATIO_MINOR_SECOND !default;
 $heading-ratio-tablet-portrait: $FONT_RATIO_MAJOR_SECOND !default;
@@ -45,11 +57,15 @@ $heading-ratio-desktop: $FONT_RATIO_MINOR_THIRD !default;
 $heading-ratio-widescreen: $FONT_RATIO_MAJOR_THIRD !default;
 
 /*
- * Настройки БЭМ.
+ * Настройки текста.
  */
-// Разделитель имени элемента.
-$bem-element-separator: "__" !default;
-// Разделитель имени модификатора
-$bem-modifier-separator: "_" !default;
-// Разделитель значения модификатора
-$bem-modifier-value-separator: $bem-modifier-separator !default;
+$text-font-size: 1rem;
+$text-line-height: 1.5;
+
+/*
+ * Слои по оси Z.
+ */
+// Наименьшее значение z-index фиксированных блоков.
+$z-index-fixed: 101 !default;
+// Наименьшее значение z-index всплывающих блоков.
+$z-index-popup: $z-index-fixed + 100 !default;

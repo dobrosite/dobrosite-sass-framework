@@ -1,5 +1,7 @@
 # Типографика
 
+*Эти возможности определены в файле [_typography.scss](../lib/_typography.scss).*
+
 ## Заголовки
 
 ### heading-font-size
@@ -10,7 +12,7 @@
 Пример:
 
 ```scss
-&__title {
+@include element(title) {
     @include heading-font-size(2);
 }
 ```

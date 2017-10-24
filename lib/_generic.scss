@@ -1,0 +1,16 @@
+/**
+ * Примеси и функции общего назначения.
+ */
+@import "settings";
+
+@mixin padding($values) {
+    @if length($values) == 1 {
+        padding: (nth($values, 1) * $grid-step-v) (nth($values, 1) * $grid-step-h) (nth($values, 1) * $grid-step-v) (nth($values, 1) * $grid-step-h);
+    } @else if length($values) == 2 {
+        padding: (nth($values, 1) * $grid-step-v) (nth($values, 2) * $grid-step-h) (nth($values, 1) * $grid-step-v) (nth($values, 2) * $grid-step-h);
+    } @else if length($values) == 3 {
+        padding: (nth($values, 1) * $grid-step-v) (nth($values, 2) * $grid-step-h) (nth($values, 3) * $grid-step-v) (nth($values, 2) * $grid-step-h);
+    } @else {
+        padding: (nth($values, 1) * $grid-step-v) (nth($values, 2) * $grid-step-h) (nth($values, 3) * $grid-step-v) (nth($values, 4) * $grid-step-h);
+    }
+}
