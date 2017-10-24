@@ -42,7 +42,9 @@ $grid-step-h: $rem / 2 !default;
 $grid-step-v: $rem / 2 !default;
 
 // Основной размер шрифтов заголовков.
-$heading-base-size: 1.4 * $rem !default;
+$heading-base-size: 1.5 * $rem !default;
+// Основная высота строки заголовков.
+$heading-base-height: 1 !default;
 
 /*
  * Коэффициенты изменения размера заголовков.
