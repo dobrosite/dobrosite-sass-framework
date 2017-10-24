@@ -12,9 +12,6 @@
 @import "node_modules/dobrosite-sass-framework/lib/template/имя_шаблона/reset";
 ```
 
-## Структура шаблона
+## Список шаблонов
 
-- `_settings.scss` — настройки шаблона.
-- `_reset.scss` — сброс стилей для тегов HTML.
-- `_styles.scss` — библиотека стилей.
-- `_typography.scss` — оформление текста.
+- [default](templates/default.ru.md)

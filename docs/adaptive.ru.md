@@ -1,7 +1,6 @@
 # Адаптивная вёрстка
 
-Для доступа к этим возможностям подключите файл [_adaptive.scss](../lib/_adaptive.scss) или
-[_all.scss](../lib/_all.scss).
+*Эти возможности определены в файле [_adaptive.scss](../lib/_adaptive.scss).*
 
 ## Определение ширины устройства
 
@@ -37,7 +36,7 @@
 ### Пример
 
 ```scss
-.header {
+@include block(header) {
     // Стили для всех устройств.
     
     @include for-phone-and-wider {
