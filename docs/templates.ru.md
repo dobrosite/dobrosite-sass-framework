@@ -14,4 +14,4 @@
 
 ## Список шаблонов
 
-- [default](templates/default.ru.md)
+- [classic](templates/classic.ru.md)

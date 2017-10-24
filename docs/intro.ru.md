@@ -65,7 +65,7 @@
 @import "path/to/node_modules/compass-mixins/lib/compass";
 @import "path/to/node_modules/dobrosite-sass-framework/lib/all";
 // Подключаем шаблон.
-@import "path/to/node_modules/dobrosite-sass-framework/lib/template/default/all";
+@import "path/to/node_modules/dobrosite-sass-framework/lib/template/classic/all";
 ```
 
 Следующий шаг — добавление [блоков](bem.ru.md). Блоки рекомендуется размещать непосредственно в
@@ -75,7 +75,7 @@
 ```scss
 @import "path/to/node_modules/compass-mixins/lib/compass";
 @import "path/to/node_modules/dobrosite-sass-framework/lib/all";
-@import "path/to/node_modules/dobrosite-sass-framework/lib/template/default/all";
+@import "path/to/node_modules/dobrosite-sass-framework/lib/template/classic/all";
 
 // Подключаем блоки слоя пользователя.
 @import "blocks/foo";
@@ -102,7 +102,7 @@
 
 @import "path/to/node_modules/compass-mixins/lib/compass";
 @import "path/to/node_modules/dobrosite-sass-framework/lib/all";
-@import "path/to/node_modules/dobrosite-sass-framework/lib/template/default/all";
+@import "path/to/node_modules/dobrosite-sass-framework/lib/template/classic/all";
 
 // Подключаем переопределения слоя пользователя.
 @import "typography";

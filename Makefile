@@ -2,4 +2,4 @@
 
 .PHONY: tests
 tests:
-	cd tests/default && $(MAKE) clean build
+	cd tests/classic && $(MAKE) clean build
