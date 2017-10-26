@@ -14,3 +14,6 @@ $tpl-link-color: blue !default;
 $tpl-link-visited-color: darkblue !default;
 $tpl-link-hover-color: dodgerblue !default;
 $tpl-link-active-color: $tpl-link-hover-color !default;
+
+// Отношение ширины главной части страницы к ширине боковых панелей.
+$tpl-page-main-sidebar-ratio: 5;

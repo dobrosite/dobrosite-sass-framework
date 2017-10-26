@@ -49,7 +49,7 @@
         display: block;
 
         @include for-tablet-landscape-and-wider {
-            @include flex(3 0px);
+            @include flex($tpl-page-main-sidebar-ratio 0px);
             @include order(2);
         }
     }
