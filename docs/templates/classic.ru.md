@@ -20,7 +20,7 @@
 - `false` — наибольшая ширина не ограничена.
 
 По умолчанию [$device-desktop-width](../settings.ru.md#device-desktop-width) − 2 ×
-[$rem](../settings.ru.md#Основной-размер). 
+[$base-font-size](http://compass-style.org/reference/compass/typography/vertical_rhythm/#const-base-font-size). 
 
 ### $tpl-page-body-min-width
 

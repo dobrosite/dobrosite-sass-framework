@@ -20,16 +20,6 @@ $some-setting: custom-value;
 $some-setting: custom-value;
 ```
 
-## Основные значения
-
-### $rem
-
-По умолчанию: `16px`
-     
-Основной размер, от которого зависят многие другие размеры. Вынос `rem` в переменную позволяет
-использовать это значение в вычислениях.
-
-
 ## Размеры устройств
 
 Задаёт переходные точки (breakpoints), определяющие ширину различных устройств. За основу взят
@@ -73,21 +63,9 @@ $some-setting: custom-value;
 
 ## Типографика
 
-### $text-font-size
-
-По умолчанию: `1rem`
-                     
-Размер шрифта по умолчанию.
-
-### $text-line-height
-
-По умолчанию: `1.5`
-                     
-Высота строки по умолчанию. **Важно!** Значение должно задаваться без указания единиц измерения.
-
 ### $heading-base-size
 
-По умолчанию: `1.5` * [$rem](#rem)
+По умолчанию: `1.5` * [$base-font-size](http://compass-style.org/reference/compass/typography/vertical_rhythm/#const-base-font-size)
 
 Основной размер шрифтов заголовков. Используется в
 [heading-font-size](typography.ru.md#heading-font-size). 

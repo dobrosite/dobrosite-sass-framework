@@ -22,8 +22,8 @@
 Задаёт свойства:
 
 ```scss
-font-size: $text-font-size;
-line-height: $text-line-height;
+font-size: $base-font-size;
+line-height: $base-line-height;
 ```
 
 См. [Пример блока](#Пример-блока)

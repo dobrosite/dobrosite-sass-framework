@@ -8,8 +8,8 @@
  */
 @mixin block($name) {
     .#{$name} {
-        font-size: $text-font-size;
-        line-height: $text-line-height;
+        font-size: $base-font-size;
+        line-height: $base-line-height;
         @content;
     }
 }

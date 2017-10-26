@@ -3,7 +3,7 @@
  */
 
 // Наибольшая ширина страницы.
-$tpl-page-body-max-width: $device-desktop-width - 2 * $rem !default;
+$tpl-page-body-max-width: $device-desktop-width - 2 * $base-font-size !default;
 // Наименьшая ширина страницы.
 $tpl-page-body-min-width: $device-phone-width !default;
 

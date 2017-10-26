@@ -5,11 +5,6 @@
 @import "constants";
 
 /*
- * Основная единица размера.
- */
-$rem: 16px !default;
-
-/*
  * Настройки БЭМ.
  */
 // Разделитель имени элемента.
@@ -38,11 +33,11 @@ $device-widescreen-width: 1800px !default;
 /*
  * Настройки сетки.
  */
-$grid-step-h: $rem / 2 !default;
-$grid-step-v: $rem / 2 !default;
+$grid-step-h: $base-font-size / 2 !default;
+$grid-step-v: $base-font-size / 2 !default;
 
 // Основной размер шрифтов заголовков.
-$heading-base-size: 1.5 * $rem !default;
+$heading-base-size: 1.5 * $base-font-size !default;
 // Основная высота строки заголовков.
 $heading-base-height: 1 !default;
 
@@ -55,12 +50,6 @@ $heading-ratio-tablet-portrait: $FONT_RATIO_MAJOR_SECOND !default;
 $heading-ratio-tablet-landscape: $FONT_RATIO_MINOR_THIRD !default;
 $heading-ratio-desktop: $FONT_RATIO_MINOR_THIRD !default;
 $heading-ratio-widescreen: $FONT_RATIO_MAJOR_THIRD !default;
-
-/*
- * Настройки текста.
- */
-$text-font-size: 1rem;
-$text-line-height: 1.5;
 
 /*
  * Слои по оси Z.
