@@ -2,7 +2,8 @@
  * Сброс стилей для тегов HTML.
  */
 
+@include establish-baseline;
+
 html {
     @include reset-box-model;
-    @include establish-baseline;
 }

@@ -30,12 +30,6 @@ $device-desktop-width: 1200px !default;
 // Наименьшая ширина широкоформатного монитора.
 $device-widescreen-width: 1800px !default;
 
-/*
- * Настройки сетки.
- */
-$grid-step-h: $base-font-size / 2 !default;
-$grid-step-v: $base-font-size / 2 !default;
-
 // Основной размер шрифтов заголовков.
 $heading-base-size: 1.5 * $base-font-size !default;
 // Основная высота строки заголовков.
