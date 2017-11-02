@@ -1,0 +1,4 @@
+@include block(header) {
+    @include padding(1/2);
+    background: #ddf;
+}

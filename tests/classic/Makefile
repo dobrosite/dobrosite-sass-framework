@@ -8,4 +8,4 @@ clean:
 	-rm bundle.css
 
 bundle.css:
-	../../node_modules/.bin/node-sass -i bundle.scss -o .
+	../../node_modules/.bin/node-sass --output-style=expanded -i bundle.scss -o .

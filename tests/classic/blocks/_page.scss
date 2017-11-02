@@ -3,10 +3,15 @@
         background: #dfd;
     }
     @include element(header) {
-        @include padding(1/2);
-        background: #ddf;
     }
     @include element(sidebar) {
         background: #ffd;
+        color: green;
+    }
+
+    @include modifier(foo,bar) {
+        @include element(page, sidebar) {
+            color: red;
+        }
     }
 }

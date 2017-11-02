@@ -5,6 +5,8 @@
 
 /**
  * Блок БЭМ.
+ *
+ * @param string $name Имя блока.
  */
 @mixin block($name) {
     .#{$name} {
@@ -16,15 +18,27 @@
 
 /**
  * Элемент блока БЭМ.
+ *
+ * @param string      $name  Имя элемента (или блока, если указан аргумент $extra).
+ * @param string|bool $extra Имя элемента, если указан.
  */
-@mixin element($name) {
-    &#{$bem-element-separator}#{$name} {
-        @content;
+@mixin element($name, $extra: false) {
+    @if $extra {
+        .#{$name}#{$bem-element-separator}#{$extra} {
+            @content;
+        }
+    } @else {
+        &#{$bem-element-separator}#{$name} {
+            @content;
+        }
     }
 }
 
 /**
  * Модификатор БЭМ.
+ *
+ * @param string      $property Имя свойства.
+ * @param string|bool $value    Необязательное значение свойства.
  */
 @mixin modifier($property, $value: true) {
     @if $value == true or $value == yes {
