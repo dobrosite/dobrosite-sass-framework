@@ -1,4 +1,9 @@
 @include block(header) {
-    @include padding(1/2);
+    @include padding(1 2);
     background: #ddf;
+
+    @include element(link) {
+        @include link-property(color, blue);
+        @include link-property(text-decoration, underline, none);
+    }
 }

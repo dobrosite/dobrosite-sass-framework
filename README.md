@@ -21,6 +21,10 @@
 - [БЭМ](docs/bem.ru.md)
 - [Адаптивная вёрстка](docs/adaptive.ru.md)
 - [Типографика](docs/typography.ru.md)
-- [Шаблоны](docs/templates.ru.md)
-  - [default](docs/templates/default.ru.md)
+- [Прочее](docs/misc.ru.md)
 - [Константы](docs/constants.ru.md)
+
+[Шаблоны](docs/templates.ru.md)
+
+- [default](docs/templates/default.ru.md)
+
