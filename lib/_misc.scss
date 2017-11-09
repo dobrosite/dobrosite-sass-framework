@@ -1,0 +1,48 @@
+/**
+ * Примеси и функции общего назначения.
+ */
+@import "settings";
+
+/**
+ * Задаёт значение свойства для ссылки.
+ */
+@mixin link-property($property, $link, $hover: $link, $visited: $link, $focus: false, $active: false) {
+    #{$property}: $link;
+
+    &:visited {
+        #{$property}: $visited;
+    }
+
+    @if $focus {
+        &:focus {
+            #{$property}: $focus;
+        }
+    }
+
+    &:hover {
+        #{$property}: $hover;
+    }
+
+    @if $active {
+        &:active {
+            #{$property}: $active;
+        }
+    }
+}
+
+/**
+ * Задаёт элементу внутренние отступы, кратные размеру сетки.
+ */
+@mixin padding($values) {
+    $step: $base-font-size / 2;
+
+    @if length($values) == 1 {
+        padding: (nth($values, 1) * $step);
+    } @else if length($values) == 2 {
+        padding: (nth($values, 1) * $step) (nth($values, 2) * $step);
+    } @else if length($values) == 3 {
+        padding: (nth($values, 1) * $step) (nth($values, 2) * $step) (nth($values, 3) * $step);
+    } @else {
+        padding: (nth($values, 1) * $step) (nth($values, 2) * $step) (nth($values, 3) * $step) (nth($values, 4) * $step);
+    }
+}
