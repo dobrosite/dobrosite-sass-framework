@@ -5,6 +5,9 @@
 
 ## Не выпущено
 
+### Добавлено
+
+- Функция [element-class](docs/bem.ru.md#element-class).
 
 ## 0.6.0 — 2017-11-09
 

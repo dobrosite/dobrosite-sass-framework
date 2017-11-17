@@ -4,6 +4,18 @@
 @import "settings";
 
 /**
+ * Возвращает имя класса элемента.
+ *
+ * @param string $block   Имя блока.
+ * @param string $element Имя элемента.
+ *
+ * @return string
+ */
+@function element-class($block, $element) {
+    @return #{$block}#{$bem-element-separator}#{$element};
+}
+
+/**
  * Блок БЭМ.
  *
  * @param string $name Имя блока.
@@ -24,7 +36,7 @@
  */
 @mixin element($name, $extra: false) {
     @if $extra {
-        .#{$name}#{$bem-element-separator}#{$extra} {
+        .#{element-class($name, $extra)} {
             @content;
         }
     } @else {
