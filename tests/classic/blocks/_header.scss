@@ -1,5 +1,5 @@
 @include block(header) {
-    @include padding(1 2);
+    @include grid-padding(1 2 3 4);
     background: #ddf;
 
     @include element(link) {

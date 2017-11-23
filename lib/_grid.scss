@@ -1,0 +1,40 @@
+/**
+ * Сетка.
+ */
+@import "settings";
+
+/**
+ * Возвращает размер по сетке.
+ *
+ * @param $size Целое число (1, 2, 3…), задающее шаг размера сетки.
+ *
+ * @return Размер в px.
+ *
+ * @since 0.7.0
+ */
+@function grid-size($size) {
+    $result: $grid-base-size;
+
+    @for $i from 1 to $size {
+        $result: $result * $grid-ratio;
+    }
+
+    @return $result;
+}
+
+/**
+ * Задаёт элементу внутренние отступы, кратные размеру сетки.
+ *
+ * @since 0.7.0
+ */
+@mixin grid-padding($values) {
+    @if length($values) == 1 {
+        padding: grid-size(nth($values, 1));
+    } @else if length($values) == 2 {
+        padding: grid-size(nth($values, 1)) grid-size(nth($values, 2));
+    } @else if length($values) == 3 {
+        padding: grid-size(nth($values, 1) ) grid-size(nth($values, 2)) grid-size(nth($values, 3));
+    } @else {
+        padding: grid-size(nth($values, 1)) grid-size(nth($values, 2)) grid-size(nth($values, 3)) grid-size(nth($values, 4));
+    }
+}

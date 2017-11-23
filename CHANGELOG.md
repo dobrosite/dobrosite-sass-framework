@@ -5,9 +5,19 @@
 
 ## Не выпущено
 
+
+## 0.7.0 — 2017-11-23
+
 ### Добавлено
 
+- [Работа с сеткой](docs/grid.ru.md).
 - Функция [element-class](docs/bem.ru.md#element-class).
+
+### Изменено
+
+- Примесь [heading-font-size](docs/typography.ru.md#heading-font-size) теперь округляет значения
+  `font-size`.
+- Примесь [padding](docs/misc.ru.md#padding) объявлена устаревшей.
 
 ## 0.6.0 — 2017-11-09
 

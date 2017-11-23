@@ -2,7 +2,9 @@
  * Типографика.
  */
 
+@import "settings";
 @import "adaptive";
+@import "grid";
 
 /**
  * Возвращает мультипликатор размера заголовка.
@@ -40,74 +42,94 @@
     $step: $base-font-size / 2;
 
     $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-default);
-    font-size: $font-size;
+    font-size: round($font-size);
     line-height: ceil($heading-base-height * $font-size / $step) * $step;
 
     @include for-phone-and-wider {
         $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-phone);
-        font-size: $font-size;
+        font-size: round($font-size);
         line-height: ceil($heading-base-height * $font-size / $step) * $step;
     }
 
     @include for-tablet-portrait-and-wider {
         $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-tablet-portrait);
-        font-size: $font-size;
+        font-size: round($font-size);
         line-height: ceil($heading-base-height * $font-size / $step) * $step;
     }
 
     @include for-tablet-landscape-and-wider {
         $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-tablet-landscape);
-        font-size: $font-size;
+        font-size: round($font-size);
         line-height: ceil($heading-base-height * $font-size / $step) * $step;
     }
 
     @include for-desktop-and-wider {
         $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-desktop);
-        font-size: $font-size;
+        font-size: round($font-size);
         line-height: ceil($heading-base-height * $font-size / $step) * $step;
     }
 
     @include for-wide-screens {
         $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-widescreen);
-        font-size: $font-size;
+        font-size: round($font-size);
         line-height: ceil($heading-base-height * $font-size / $step) * $step;
+    }
+}
+
+/**
+ * Задаёт задаёт размеры внешних отступов заголовка.
+ *
+ * @param $level Уровень заголовка (1, 2, 3…).
+ */
+@mixin heading-margins($level)
+{
+    margin-bottom: grid-size(1);
+    margin-top: grid-size(1);
+
+    @include for-phone-and-wider {
+    }
+
+    @include for-tablet-portrait-and-wider {
+    }
+
+    @include for-tablet-landscape-and-wider {
+    }
+
+    @include for-desktop-and-wider {
+    }
+
+    @include for-wide-screens {
     }
 }
 
 h1 {
     @include heading-font-size(1);
-    margin-bottom: $base-font-size / 2;
-    margin-top: $base-font-size / 2;
+    @include heading-margins(1);
 }
 
 h2 {
     @include heading-font-size(2);
-    margin-bottom: $base-font-size / 2;
-    margin-top: $base-font-size / 2;
+    @include heading-margins(2);
 }
 
 h3 {
     @include heading-font-size(3);
-    margin-bottom: $base-font-size / 2;
-    margin-top: $base-font-size / 2;
+    @include heading-margins(3);
 }
 
 h4 {
     @include heading-font-size(4);
-    margin-bottom: $base-font-size / 2;
-    margin-top: $base-font-size / 2;
+    @include heading-margins(4);
 }
 
 h5 {
     @include heading-font-size(5);
-    margin-bottom: $base-font-size / 2;
-    margin-top: $base-font-size / 2;
+    @include heading-margins(5);
 }
 
 h6 {
     @include heading-font-size(6);
-    margin-bottom: $base-font-size / 2;
-    margin-top: $base-font-size / 2;
+    @include heading-margins(6);
 }
 
 p {

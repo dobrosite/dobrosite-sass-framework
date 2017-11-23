@@ -20,6 +20,7 @@
 - [Настройки](docs/settings.ru.md)
 - [БЭМ](docs/bem.ru.md)
 - [Адаптивная вёрстка](docs/adaptive.ru.md)
+- [Сетка](docs/grid.ru.md)
 - [Типографика](docs/typography.ru.md)
 - [Прочее](docs/misc.ru.md)
 - [Константы](docs/constants.ru.md)
