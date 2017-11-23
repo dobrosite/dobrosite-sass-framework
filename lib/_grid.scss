@@ -13,6 +13,12 @@
  * @since 0.7.0
  */
 @function grid-size($size) {
+    $size: round($size);
+
+    @if $size < 1 {
+        @return 0;
+    }
+
     $result: $grid-base-size;
 
     @for $i from 1 to $size {
