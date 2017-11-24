@@ -14,22 +14,13 @@
  */
 @function heading-size-multiplier($level, $ratio)
 {
-    @if $level == 1 {
-        @return $ratio * $ratio * $ratio;
+    $result: 1;
+
+    @for $i from 1 to 6 - $level {
+        $result: $result * $ratio;
     }
-    @if $level == 2 {
-        @return $ratio * $ratio;
-    }
-    @if $level == 3 {
-        @return $ratio;
-    }
-    @if $level == 4 {
-        @return 1;
-    }
-    @if $level == 5 {
-        @return 1 / $ratio;
-    }
-    @return 1 / $ratio / $ratio;
+
+    @return $result;
 }
 
 /**
@@ -83,23 +74,8 @@
  */
 @mixin heading-margins($level)
 {
-    margin-bottom: grid-size(1);
-    margin-top: grid-size(1);
-
-    @include for-phone-and-wider {
-    }
-
-    @include for-tablet-portrait-and-wider {
-    }
-
-    @include for-tablet-landscape-and-wider {
-    }
-
-    @include for-desktop-and-wider {
-    }
-
-    @include for-wide-screens {
-    }
+    margin-bottom: grid-size((7 - $level) * $heading-margin-bottom-base * $heading-margin-bottom-ratio);
+    margin-top: grid-size((7 - $level) * $heading-margin-top-base * $heading-margin-top-ratio);
 }
 
 h1 {

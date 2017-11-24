@@ -65,7 +65,7 @@ $some-setting: custom-value;
 
 ### $heading-base-size
 
-По умолчанию: **1.5 * [$base-font-size](http://compass-style.org/reference/compass/typography/vertical_rhythm/#const-base-font-size)**
+По умолчанию: **[$base-font-size](http://compass-style.org/reference/compass/typography/vertical_rhythm/#const-base-font-size)**
 
 Основной размер шрифтов заголовков. Используется в
 [heading-font-size](typography.ru.md#heading-font-size). 

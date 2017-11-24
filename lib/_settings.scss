@@ -45,9 +45,17 @@ $grid-base-size: $base-font-size / 4 !default;
 $grid-ratio: 2 !default;
 
 // Основной размер шрифтов заголовков.
-$heading-base-size: 1.5 * $base-font-size !default;
+$heading-base-size: $base-font-size !default;
 // Основная высота строки заголовков.
 $heading-base-height: 1 !default;
+// Основной размер верхнего отступа заголовков.
+$heading-margin-top-base: 1 !default;
+// Коэффициент изменения размера верхнего отступа заголовков.
+$heading-margin-top-ratio: 1.2 !default;
+// Основной размер нижнего отступа заголовков.
+$heading-margin-bottom-base: 1 !default;
+// Коэффициент изменения размера нижнего отступа заголовков.
+$heading-margin-bottom-ratio: 1 !default;
 
 /*
  * Коэффициенты изменения размера заголовков.
