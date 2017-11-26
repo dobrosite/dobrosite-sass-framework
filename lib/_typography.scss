@@ -74,8 +74,9 @@
  */
 @mixin heading-margins($level)
 {
-    margin-bottom: grid-size((7 - $level) * $heading-margin-bottom-base * $heading-margin-bottom-ratio);
-    margin-top: grid-size((7 - $level) * $heading-margin-top-base * $heading-margin-top-ratio);
+    $size : 7 - $level;
+    margin-bottom: grid-size($heading-margin-bottom-base * $size * $heading-margin-bottom-ratio);
+    margin-top: grid-size($heading-margin-top-base * $size * $heading-margin-top-ratio);
 }
 
 h1 {
