@@ -19,13 +19,6 @@
         Стили
     }
 
-Задаёт свойства:
-
-```scss
-font-size: $base-font-size;
-line-height: $base-line-height;
-```
-
 См. [Пример блока](#Пример-блока)
 
 ### element

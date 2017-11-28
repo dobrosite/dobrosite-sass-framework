@@ -22,8 +22,6 @@
  */
 @mixin block($name) {
     .#{$name} {
-        font-size: $base-font-size;
-        line-height: $base-line-height;
         @content;
     }
 }
