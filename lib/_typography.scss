@@ -108,8 +108,3 @@ h6 {
     @include heading-font-size(6);
     @include heading-margins(6);
 }
-
-p {
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-}
