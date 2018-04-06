@@ -1,7 +1,6 @@
 /**
  * Типографика.
  */
-
 @import "settings";
 @import "adaptive";
 @import "grid";
@@ -12,8 +11,7 @@
  * @param $level Уровень заголовка (1, 2, 3…).
  * @param $ratio Используемое отношение (см. $heading-ratio-…).
  */
-@function heading-size-multiplier($level, $ratio)
-{
+@function heading-size-multiplier($level, $ratio) {
     $result: 1;
 
     @for $i from 1 to 6 - $level {
@@ -28,8 +26,7 @@
  *
  * @param $level Уровень заголовка (1, 2, 3…).
  */
-@mixin heading-font-size($level)
-{
+@mixin heading-font-size($level) {
     $step: $base-font-size / 2;
 
     $font-size: $heading-base-size * heading-size-multiplier($level, $heading-ratio-default);
@@ -68,15 +65,73 @@
 }
 
 /**
- * Задаёт задаёт размеры внешних отступов заголовка.
+ * Задаёт размер отступа для заголовка.
  *
- * @param $level Уровень заголовка (1, 2, 3…).
+ * @param string $spacing Имя отступа (margin-top, margin-bottom).
+ * @param map    $map     Карта отступов.
+ * @param number $level   Уровень заголовка.
+ *
+ * @internal
  */
-@mixin heading-margins($level)
-{
-    $size : 7 - $level;
-    margin-bottom: grid-size($heading-margin-bottom-base * $size * $heading-margin-bottom-ratio);
-    margin-top: grid-size($heading-margin-top-base * $size * $heading-margin-top-ratio);
+@mixin heading-spacing($spacing, $map, $level) {
+
+    @if ($level < 1 or $level > 6) {
+        @error "Heading level should be in a range from 1 to 6!";
+    }
+
+    @if (type_of($map) != 'map') {
+        @error "Argument $map is not a map!";
+    }
+
+    $sizes: ();
+    @if (map_has_key($map, $level)) {
+        $sizes: map-get($map, $level);
+
+        @if (type_of($sizes) != 'map') {
+            @error "Element #{$level} of argument $map is not a map!";
+        }
+    }
+
+    $values: ();
+    $last-value: small;
+    @each $device in $DEVICES {
+        @if (map_has_key($sizes, $device)) {
+            $last-value: map_get($sizes, $device);
+        }
+        $values: map_merge($values, ($device: $last-value));
+    }
+
+    #{$spacing}: grid-space(map_get($values, default));
+
+    @include for-phone-and-wider {
+        #{$spacing}: grid-space(map_get($values, phone));
+    }
+
+    @include for-tablet-portrait-and-wider {
+        #{$spacing}: grid-space(map_get($values, tablet-portrait));
+    }
+
+    @include for-tablet-landscape-and-wider {
+        #{$spacing}: grid-space(map_get($values, tablet-landscape));
+    }
+
+    @include for-desktop-and-wider {
+        #{$spacing}: grid-space(map_get($values, desktop));
+    }
+
+    @include for-wide-screens {
+        #{$spacing}: grid-space(map_get($values, widescreen));
+    }
+}
+
+/**
+ * Задаёт размеры внешних отступов заголовка.
+ *
+ * @param number $level Уровень заголовка (1, 2, 3…).
+ */
+@mixin heading-margins($level) {
+    @include heading-spacing(margin-bottom, $heading-margin-bottom, $level);
+    @include heading-spacing(margin-top, $heading-margin-top, $level);
 }
 
 h1 {

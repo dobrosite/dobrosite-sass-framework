@@ -1,5 +1,5 @@
 @include block(header) {
-    @include grid-padding(0 2 3 4);
+    padding: grid-space(half) grid-space(small) grid-space(normal) grid-space(large);
     background: #ddf;
 
     @include element(link) {

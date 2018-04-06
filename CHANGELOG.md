@@ -5,9 +5,24 @@
 
 ## Не выпущено
 
+### Удалено
+
+- Удалены настройки:
+  - `$heading-margin-top-base`
+  - `$heading-margin-top-ratio`
+  - `$heading-margin-bottom-base`
+  - `$heading-margin-bottom-ratio`
+
 ### Изменено
 
 - Для тега `p` больше не устанавливаются свойства `font-size` и `line-height`.
+- Функция `grid-size` объявлена устаревшей.
+- Примесь `grid-padding` объявлена устаревшей.
+
+### Добавлено
+
+- Функция [grid-space](docs/grid.ru.md#grid-space).
+- Константа [DEVICES](docs/constants.ru.md#$devices).
 
 
 ## 0.9.0 — 2017-11-28

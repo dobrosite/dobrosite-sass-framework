@@ -2,6 +2,13 @@
  * Глобальные константы.
  */
 
+/**
+ * Ключевые слова для размеров устройств.
+ *
+ * @since 0.10.0
+ */
+$DEVICES: default phone tablet-portrait tablet-landscape desktop widescreen;
+
 /*
  * Коэффициенты изменения размера шрифта.
  *

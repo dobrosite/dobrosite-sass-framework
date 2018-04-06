@@ -2,6 +2,17 @@
 
 *Эти возможности определены в файле [_constants.scss](../lib/_constants.scss).*
 
+## $DEVICES
+
+Ключевые слова для размеров устройств:
+
+- `default`
+- `phone`
+- `tablet-portrait` 
+- `tablet-landscape` 
+- `desktop`
+- `widescreen`
+
 ## Коэффициенты изменения размера шрифта
 
 См. http://type-scale.com/

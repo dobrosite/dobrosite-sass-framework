@@ -1,7 +1,6 @@
 /**
  * Глобальные переменные.
  */
-
 @import "constants";
 
 /*
@@ -57,32 +56,32 @@ $heading-base-size: $base-font-size !default;
 $heading-base-height: 1 !default;
 
 /**
- * Основной размер верхнего отступа заголовков.
+ * Карта нижних внешних отступов заголовков.
  *
- * @since 0.8.0
+ * @since 0.10.0
  */
-$heading-margin-top-base: 1 !default;
+$heading-margin-bottom: (
+        1: (default: small, tablet-landscape: normal),
+        2: (default: small, tablet-landscape: normal),
+        3: (default: small, tablet-landscape: normal),
+        4: (default: small),
+        5: (default: small),
+        6: (default: small)
+) !default;
 
 /**
- * Коэффициент изменения размера верхнего отступа заголовков.
+ * Карта верхних внешних отступов заголовков.
  *
- * @since 0.8.0
+ * @since 0.10.0
  */
-$heading-margin-top-ratio: 0.5 !default;
-
-/**
- * Основной размер нижнего отступа заголовков.
- *
- * @since 0.8.0
- */
-$heading-margin-bottom-base: 1 !default;
-
-/**
- * Коэффициент изменения размера нижнего отступа заголовков.
- *
- * @since 0.8.0
- */
-$heading-margin-bottom-ratio: 0.5 !default;
+$heading-margin-top: (
+        1: (default: small, tablet-landscape: normal),
+        2: (default: small, tablet-landscape: normal),
+        3: (default: small, tablet-landscape: normal),
+        4: (default: small),
+        5: (default: small),
+        6: (default: small)
+) !default;
 
 /*
  * Коэффициенты изменения размера заголовков.
